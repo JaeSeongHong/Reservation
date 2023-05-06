@@ -2,6 +2,8 @@ package View;
 
 import java.util.Scanner;
 
+import Model.AirportDAO;
+import Model.TicketingDAO;
 import Model.UserDAO;
 
 public class Main {
@@ -9,6 +11,9 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		UserDAO dao = new UserDAO();
+		AirportDAO airdao = new AirportDAO();
+		TicketingDAO ticketdao = new TicketingDAO();
+		
 		int select;
 		
 		
@@ -17,7 +22,7 @@ public class Main {
 		System.out.println("==========================================");
 		
 		while(true) {
-			System.out.print("[1]회원가입\t[2]로그인    \t[3]종료 ");
+			System.out.print("[1]회원가입\t[2]로그인    \t[3]종료 >> ");
 			select = sc.nextInt();
 			
 			if(select==1) {//회원가입
@@ -50,6 +55,9 @@ public class Main {
 					if(select==1) {//예약하기
 						System.out.print("도착지를 입력해주세요 >> ");
 						String arrive = sc.next();
+						if(arrive.equals(airdao.portName(arrive))) {
+							System.out.println(airdao.portName(arrive));
+						}
 						
 					}else if(select==2) {//예약조회
 						
