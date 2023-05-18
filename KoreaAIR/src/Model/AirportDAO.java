@@ -65,7 +65,6 @@ public void getConn() {//DB연결
 			
 			if(rs.next()) {
 				cityName = rs.getString("PORT_NAME");
-				price = rs.getNString(price);
 			}
 			
 		} catch (SQLException e) {

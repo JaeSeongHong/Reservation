@@ -22,7 +22,7 @@ public class Main {
 		System.out.println("==========================================");
 		
 		while(true) {
-			System.out.print("[1]회원가입\t[2]로그인    \t[3]종료 >> ");
+			System.out.print("[1]회원가입   \t[2]로그인    \t[3]종료 >> ");
 			select = sc.nextInt();
 			
 			if(select==1) {//회원가입
