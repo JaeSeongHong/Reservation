@@ -72,6 +72,7 @@ public void SignUp(String newId, String newPw, String newName, String cellNum) {
 		pstm.setString(4, cellNum);
 		
 		result = pstm.executeUpdate();
+		System.out.println(result);
 		
 		
 	} catch (SQLException e) {
