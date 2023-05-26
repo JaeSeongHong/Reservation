@@ -95,6 +95,7 @@ public String login(String InputId, String InputPw) {
 		pstm.setString(1, InputId);
 		pstm.setString(2, InputPw);
 		rs = pstm.executeQuery();
+		System.out.println(rs);
 		
 		if(rs.next()) {
 			userName = rs.getString("USER_NAME");
