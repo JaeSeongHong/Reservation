@@ -37,6 +37,7 @@ public class Main {
 				String newCellnum = sc.next();
 				
 				dao.SignUp(newId, newPw, newName, newCellnum);
+				System.out.println("test");
 				
 			}else if(select==2) {//로그인
 				
